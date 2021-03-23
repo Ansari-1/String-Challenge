@@ -1,0 +1,16 @@
+def StringChallenge(s):
+	d = dict();
+	for i in s:
+		count = 0
+		temp = i
+		for j in s:
+			if temp == j:
+				count = count + 1
+		d[i] = count
+	res = ""
+	for i in d:
+		res = res + str(d[i])
+		res = res + str(i)
+	return res
+s = input()
+print(StringChallenge(s))
